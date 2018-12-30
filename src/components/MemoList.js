@@ -4,8 +4,7 @@ import { StyleSheet, View, Text } from 'react-native';
 class MemoList extends React.Component {
     render() {
         return (
-            <View>
-                <View style={styles.memoList}>
+            <View style={styles.memoList}>
                 <View style={styles.memoListItem}>
                     <Text style={styles.memoTitle}>メモ１</Text>
                     <Text style={styles.memoDate}>2018/12/25</Text>
@@ -29,8 +28,6 @@ class MemoList extends React.Component {
                 <View style={styles.memoListItem}>
                     <Text style={styles.memoTitle}>メモ５</Text>
                     <Text style={styles.memoDate}>2018/12/25</Text>
-                </View>
-
                 </View>
             </View>
         );
