@@ -2,55 +2,25 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import BodyText from './src/elements/BodyText';
-// import { isAbsolute } from 'path';
+import MemoList from './src/components/MemoList';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
 
+        <MemoList />
+
         <View style={styles.appbar}>
           <View>
-            <Text style={styles.appbarTitle}>MemoApp</Text>
+            <Text style={styles.appbarTitle}>MEMOT</Text>
           </View>
         </View>
 
-        <View style={styles.memoList}>
-
-          <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>メモ１</Text>
-            <Text style={styles.memoDate}>2018/12/25</Text>
-          </View>
-
-          <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>メモ２</Text>
-            <Text style={styles.memoDate}>2018/12/25</Text>
-          </View>
-
-          <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>メモ３</Text>
-            <Text style={styles.memoDate}>2018/12/25</Text>
-          </View>
-
-          <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>メモ４</Text>
-            <Text style={styles.memoDate}>2018/12/25</Text>
-          </View>
-
-          <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>メモ５</Text>
-            <Text style={styles.memoDate}>2018/12/25</Text>
-          </View>
-
-          <View style={styles.memoAddButton}>
-            <Text style={styles.memoAddButtonTitle}>+</Text>
-          </View>
-
-          {/* <View>
-            <Text>+</Text>
-          </View> */}
-
+        <View style={styles.memoAddButton}>
+          <Text style={styles.memoAddButtonTitle}>+</Text>
         </View>
+
       </View>
     );
   }
@@ -83,22 +53,6 @@ const styles = StyleSheet.create({
     fontSize: 32,
     lineHeight: 32,
     color: '#fff',
-  },
-  memoList: {
-    width: '100%',
-    flex: 1,
-  },
-  memoListItem: {
-    padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
-  },
-  memoTitle: {
-    fontSize: 18,
-  },
-  memoDate: {
-    fontSize: 12,
-    color: '#a2a2a2',
   },
   appbar: {
     position: 'absolute',
