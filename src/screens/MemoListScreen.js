@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 import MemoList from '../components/MemoList';
 import CircleButton from '../elements/CircleButton';
