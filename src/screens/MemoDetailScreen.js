@@ -4,22 +4,24 @@ import CircleButton from '../elements/CircleButton';
 
 class MemoDetailScreen extends React.Component {
     render() {
-        return <View style={styles.container}>
-            <View>
-              <View style={styles.memoHeader}>
+        return (
+            <View style={styles.container}>
                 <View>
-                  <Text style={styles.memoHeaderTitle}>メモ6</Text>
-                  <Text style={styles.memoHeaderDate}>2019/01/02</Text>
+                    <View style={styles.memoHeader}>
+                        <View>
+                            <Text style={styles.memoHeaderTitle}>メモ6</Text>
+                            <Text style={styles.memoHeaderDate}>2019/01/02</Text>
+                        </View>
+                    </View>
                 </View>
-              </View>
-            </View>
 
-            <View style={styles.memoContent}>
-              <Text>ここに本文が入ります。</Text>
-            </View>
+                <View style={styles.memoContent}>
+                   <Text>ここに本文が入ります。</Text>
+                </View>
 
-            <CircleButton color="white" style={styles.editButton}>+</CircleButton>
-          </View>;
+                <CircleButton name="pencil" color="white" style={styles.editButton} />
+            </View>
+        );
     }
 }
 
