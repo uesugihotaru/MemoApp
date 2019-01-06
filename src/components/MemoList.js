@@ -1,34 +1,31 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableHighlight } from 'react-native';
 
 class MemoList extends React.Component {
     render() {
         return (
             <View style={styles.memoList}>
+                <TouchableHighlight onPress={() => {this.props.navigation.navigate("MemoDetail");}} underlayColor="#DDD">
                 <View style={styles.memoListItem}>
                     <Text style={styles.memoTitle}>メモ１</Text>
                     <Text style={styles.memoDate}>2018/12/25</Text>
                 </View>
+                </TouchableHighlight>
 
+                <TouchableHighlight onPress={() => {this.props.navigation.navigate("MemoDetail");}} underlayColor="#DDD">
                 <View style={styles.memoListItem}>
                     <Text style={styles.memoTitle}>メモ２</Text>
                     <Text style={styles.memoDate}>2018/12/25</Text>
                 </View>
+                </TouchableHighlight>
 
+                <TouchableHighlight onPress={() => {this.props.navigation.navigate("MemoDetail");}} underlayColor="#DDD">
                 <View style={styles.memoListItem}>
                     <Text style={styles.memoTitle}>メモ３</Text>
                     <Text style={styles.memoDate}>2018/12/25</Text>
                 </View>
+                </TouchableHighlight>
 
-                <View style={styles.memoListItem}>
-                    <Text style={styles.memoTitle}>メモ４</Text>
-                    <Text style={styles.memoDate}>2018/12/25</Text>
-                </View>
-
-                <View style={styles.memoListItem}>
-                    <Text style={styles.memoTitle}>メモ５</Text>
-                    <Text style={styles.memoDate}>2018/12/25</Text>
-                </View>
             </View>
         );
     }

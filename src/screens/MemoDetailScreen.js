@@ -9,7 +9,7 @@ class MemoDetailScreen extends React.Component {
                 <View>
                     <View style={styles.memoHeader}>
                         <View>
-                            <Text style={styles.memoHeaderTitle}>メモ6</Text>
+                            <Text style={styles.memoHeaderTitle}>メモ</Text>
                             <Text style={styles.memoHeaderDate}>2019/01/02</Text>
                         </View>
                     </View>
@@ -19,7 +19,7 @@ class MemoDetailScreen extends React.Component {
                    <Text>ここに本文が入ります。</Text>
                 </View>
 
-                <CircleButton name="pencil" color="white" style={styles.editButton} />
+                <CircleButton name="pencil" color="white" style={styles.editButton} onPress={() => { this.props.navigation.navigate('MemoEdit'); }}/>
             </View>
         );
     }
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     editButton: {
-        top: 80,
+        top: 40,
     },
 });
 
