@@ -5,8 +5,9 @@ import MemoEditScreen from './src/screens/MemoEditScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
 import firebase from 'firebase';
-
 import ENV from './env.json';
+
+require("firebase/firestore");
 
 const config = {
   apiKey:            ENV.FIREBASE_API_KEY,
@@ -20,6 +21,7 @@ firebase.initializeApp(config);
 
 const App = createStackNavigator(
   {
+
     Login:      { screen: LoginScreen },
     Signup:     { screen: SignupScreen },
     Home:       { screen: MemoListScreen },
